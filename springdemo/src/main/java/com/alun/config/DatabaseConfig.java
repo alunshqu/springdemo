@@ -1,5 +1,6 @@
 package com.alun.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.mysql.cj.conf.DatabaseUrlContainer;
 import com.mysql.cj.conf.HostInfo;
 import com.mysql.cj.jdbc.ConnectionImpl;
@@ -16,7 +17,6 @@ import java.util.logging.Logger;
 
 public class DatabaseConfig {
 
-    @Bean
     public DataSource dataSource() {
 
         return new DataSource() {
@@ -69,5 +69,15 @@ public class DatabaseConfig {
                 return null;
             }
         };
+    }
+
+    @Bean
+    public DataSource dataSourcePool() {
+        DruidDataSource druidDataSource = new DruidDataSource();
+        druidDataSource.setUrl("jdbc:mysql://aaron.com:3306/test");
+        druidDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        druidDataSource.setUsername("root");
+        druidDataSource.setPassword("123456");
+        return druidDataSource;
     }
 }

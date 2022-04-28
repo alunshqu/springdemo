@@ -10,7 +10,7 @@ public class Application {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.alun");
         DemoService demoService = applicationContext.getBean(DemoService.class);
         try {
-            demoService.updateAgeAndName(200, "李四1");
+            demoService.updateAgeAndName(56, "李四1111");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
