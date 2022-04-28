@@ -24,7 +24,7 @@ public class DatabaseConfig {
             public Connection getConnection() throws SQLException {
                 Map<String, String> hostProperties = new HashMap<>();
                 hostProperties.put("dbname", "test");
-                HostInfo hostInfo = new HostInfo(null, "10.118.32.156", 3306, "root", "123456", hostProperties);
+                HostInfo hostInfo = new HostInfo(null, "localhost", 3306, "root", "123456", hostProperties);
                 Connection connection = new ConnectionImpl(hostInfo);
                 return connection;
             }
