@@ -55,6 +55,11 @@
             <artifactId>druid</artifactId>
             <version>1.2.9</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.shyiko</groupId>
+            <artifactId>mysql-binlog-connector-java</artifactId>
+            <version>0.21.0</version>
+        </dependency>
 
     </dependencies>
 
